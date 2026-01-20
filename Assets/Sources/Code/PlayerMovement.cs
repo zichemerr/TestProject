@@ -14,13 +14,15 @@ namespace Sources.Code
         [SerializeField] private float _returnSpeed;
         
         private PlayerInput _input;
+        private PlayerAnimation _playerAnimation;
         private float _currentRotation;
         private Vector2 _endPosition;
         private bool _isGrounded = false;
         
-        public void Init(PlayerInput playerInput)
+        public void Init(PlayerInput playerInput, PlayerAnimation playerAnimation)
         {
             _input = playerInput;
+            _playerAnimation = playerAnimation;
             _input.Jumped += OnJumped;
         }
         
@@ -64,6 +66,7 @@ namespace Sources.Code
             if (_isGrounded == false)
                 return;
 
+            _playerAnimation.PlayJump();
             _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
             _isGrounded = false;
         }

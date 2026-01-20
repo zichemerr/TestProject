@@ -6,6 +6,7 @@ namespace Sources.Code
     public class Player : MonoBehaviour
     {
         [SerializeField] private PlayerMovement _movement;
+        [SerializeField] private PlayerAnimation _animation;
         [SerializeField] private PlayerInput _input;
         [SerializeField] private PlayerUI playerUIPrefab;
         [SerializeField] private int _startHealth = 2;
@@ -24,7 +25,8 @@ namespace Sources.Code
             _currentHealth = _startHealth;
             
             _input.Init();
-            _movement.Init(_input);
+            _animation.Init();
+            _movement.Init(_input, _animation);
         }
 
         private void OnDisable()

@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 1374152161800708786}
   - component: {fileID: 7733095155891173392}
   - component: {fileID: 712170936298939085}
+  - component: {fileID: 97727821424370515}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -280,3 +281,19 @@ MonoBehaviour:
   _runningSpeed: 6
   _maxAngle: 60
   _returnSpeed: 0.1
+--- !u!114 &97727821424370515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6255990627374474663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e614cf7f8a6a0241932fb88b12bd417, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sources.Code.PlayerAnimation
+  _rigidbody: {fileID: 541664362996645108}
+  _pulseScale: 1.1
+  _pulseDuration: 0.2
+  _transform: {fileID: 5836536743842956901}
