@@ -5,8 +5,8 @@ namespace Sources.Code
 {
     public class PlayerInput : MonoBehaviour
     {
-        public float Horizontal => Input.GetAxis("Horizontal");
-        public float Vertical => Input.GetAxis("Vertical");
+        public float Horizontal => Input.GetAxisRaw("Horizontal");
+        public float Vertical => Input.GetAxisRaw("Vertical");
 
         public bool IsActive { get; private set; } = false;
 
