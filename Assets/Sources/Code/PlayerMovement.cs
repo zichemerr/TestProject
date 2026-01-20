@@ -17,7 +17,7 @@ namespace Sources.Code
         private float _currentRotation;
         private Vector2 _endPosition;
         private bool _isGrounded = false;
-
+        
         public void Init(PlayerInput playerInput)
         {
             _input = playerInput;
@@ -31,9 +31,14 @@ namespace Sources.Code
 
         private void FixedUpdate()
         {
+            if (_input.IsActive == false)
+                return;
+            
             var horizontal = _input.Horizontal;
+            var vertical = _input.Vertical;
+            
             Vector3 horizontalVelocity = transform.forward * _runningSpeed;
-            _rigidbody.linearVelocity = new Vector3(horizontalVelocity.x, _rigidbody.linearVelocity.y, horizontalVelocity.z);
+            _rigidbody.linearVelocity = new Vector3(horizontalVelocity.x, _rigidbody.linearVelocity.y, vertical * _runningSpeed);
     
             if (horizontal != 0)
             {
@@ -61,6 +66,11 @@ namespace Sources.Code
 
             _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
             _isGrounded = false;
+        }
+
+        public void Disable()
+        {
+            _rigidbody.linearVelocity = Vector3.zero;
         }
     }
 }

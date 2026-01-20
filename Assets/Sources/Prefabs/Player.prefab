@@ -248,6 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Sources.Code.Player
   _movement: {fileID: 712170936298939085}
   _input: {fileID: 7733095155891173392}
+  playerUIPrefab: {fileID: 0}
   _startHealth: 2
 --- !u!114 &7733095155891173392
 MonoBehaviour:
@@ -276,6 +277,6 @@ MonoBehaviour:
   _rigidbody: {fileID: 541664362996645108}
   _jumpForce: 5
   _rotationSpeed: 5
-  _runningSpeed: 3
+  _runningSpeed: 6
   _maxAngle: 60
   _returnSpeed: 0.1

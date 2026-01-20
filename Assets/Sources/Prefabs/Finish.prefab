@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5587149499908032186}
   - component: {fileID: 8458234432298477366}
   - component: {fileID: 972288335154754773}
+  - component: {fileID: 2517339162605560275}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Untagged
@@ -111,3 +112,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2517339162605560275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3098394775383610688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6400e3e36e6b9424ab8f926cac08ec96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sources.Code.Finish
